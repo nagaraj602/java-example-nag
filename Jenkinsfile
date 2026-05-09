@@ -19,8 +19,8 @@ pipeline {
         stage('Checkout') {
 
             steps {
-
-                git 'https://github.com/nagaraj602/java-example-nag-jar.git'
+                cleanWs()
+                git branch: 'main', url: 'https://github.com/nagaraj602/java-example-nag-jar.git'
 
             }
         }
@@ -104,8 +104,9 @@ pipeline {
         stage('Deploy Container') {
 
             steps {
-
-                sh 'docker run -d --name java25-container -p 8080:8080 $IMAGE_URI'
+                sh 'docker stop java25-container'
+                sh 'docker rm java25-container'
+                sh 'docker run -d --name java25-container -p 8085:8085 $IMAGE_URI'
             }
         }
     }
