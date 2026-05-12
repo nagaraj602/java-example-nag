@@ -84,7 +84,7 @@ public class DemoApplication {
 
                 "<body>" +
                 "<div class='card'>" +
-                "<h1>Spring Boot Running 🚀</h1>" +
+                "<h1>My Spring boot Java App Running 🚀</h1>" +
                 "<p>Public IP: " + publicIp + "</p>" +
                 "<p>Port: 8085</p>" +
                 "</div>" +
