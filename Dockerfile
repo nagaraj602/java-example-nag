@@ -4,7 +4,7 @@ COPY . .
 
 FROM maven:3.9.15-amazoncorretto-25-debian-trixie AS build
 WORKDIR /build
-COPY --from=git-clone /git/java-example-nag-jar .
+COPY --from=git-clone /git .
 RUN mvn clean package
 
 FROM amazoncorretto:25.0.3-al2023-headless
