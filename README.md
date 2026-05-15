@@ -304,6 +304,7 @@ Run the JAR
 ```bash
 java -jar target/demo-java-example-demo-1.0.0.jar
 ```
+There is also app.jar file which you can run.
 
 ## Build using Gradle
 ```bash
